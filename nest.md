@@ -16,6 +16,23 @@ export class AppController {
     - Acoplador
         - Acopla varios controllers e varios services
     - Um module pode importar outro
+- Os providers dos modules importados não ficam disponíveis automaticamente
+  - Precisa declara quais providers devem ser compartilhados com todos modulos que o importarem
+```ts
+@Module({
+  providers: [
+    PrismaService,
+    {
+      provide: NotificationsRepository,
+      useClass: PrismaNotificationRepository,
+    },
+  ],
+  exports: [NotificationsRepository],
+})
+
+export class DatabaseModule {}
+
+  ```
 - Service
 
 # Pegar dados Request
@@ -63,6 +80,8 @@ app.useGlobalPipes(new ValidationPipe());
 
 # dicas gerais
 ## Inversão de depencidas
+- Um contrato (interface, abstract class) que define os metodos que ira ter
+- Dps tem as implementações mas na hora de instanciar usa o contrato
 - Recebe parametro como instancia
 ```ts
 export class AppController {
@@ -96,3 +115,4 @@ export class AppController {
     @Injectable()
     export class AppService {}
     ```
+

@@ -46,4 +46,6 @@
     - Opnião do nest ajuda na tomada de decisão
         - Mais produtividade
     
-
+# DTO (Data transfer object)
+- Referencia objectos que carregam dados mas não tem comportamento, somente carregamento de dados
+    - Ex: CreateNotificationBody

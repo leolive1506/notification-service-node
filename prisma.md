@@ -1,4 +1,5 @@
 # [Integrar com nestjs](https://docs.nestjs.com/recipes/prisma)
+- Apenas os repositories da camada do prisma, tem acesso ao banco
 ```tsx
 // criar arquivo de configuração como na docs e em app.module.ts
 @Module({
