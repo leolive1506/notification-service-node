@@ -49,3 +49,8 @@
 # DTO (Data transfer object)
 - Referencia objectos que carregam dados mas não tem comportamento, somente carregamento de dados
     - Ex: CreateNotificationBody
+
+# Verificar erro typescript
+```sh
+npx tsc --noEmit
+```
