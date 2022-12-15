@@ -50,6 +50,11 @@
 - Referencia objectos que carregam dados mas não tem comportamento, somente carregamento de dados
     - Ex: CreateNotificationBody
 
+  # Factory pattern
+  - Factory é uma função que retorna um objeto
+    - Função usada para abstrar criação de objetos que são repetidos / parecidos
+    - Ex: criar 3 notificações seguidas para testar
+
 # Verificar erro typescript
 ```sh
 npx tsc --noEmit
