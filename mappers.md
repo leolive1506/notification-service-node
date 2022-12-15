@@ -1,0 +1,9 @@
+- Utilizado em arquiteturas de codigos por camadas
+- Entidade pode ser representada de maneiras diferentes em cada camada da aplicação
+  - Preciso converter de um formato para outro (maperar -> mapper)
+  - Desacopla essa conversão de um formato para outro
+- Ex:
+  - Na camada de persistencia é tratada como uma table no banco mas continua sendo a entidade
+  - Na camada de aplicação ela também existe e é representada como uma class
+  - Na infra (http) tbm tem de certa forma a representação da entidade nos retornos das chamadas
+    - **Mas poderemos querer moldar a forma de retorno**
